@@ -260,6 +260,7 @@ nav ul li {
     justify-content: center;
     align-items: center;
     background-color: var(--ash-white);
+    z-index: 100;
   }
 
   .mobile-menu ul {
