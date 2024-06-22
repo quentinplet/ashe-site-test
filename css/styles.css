@@ -249,6 +249,10 @@ nav ul li {
     display: none;
   }
 
+  .no-scroll {
+    overflow: hidden;
+  }
+
   .mobile-menu {
     width: 100%;
     height: calc(100dvh - 100%);
