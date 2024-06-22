@@ -1,0 +1,514 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --ash-black: rgb(19, 19, 19);
+  --ash-blue: rgb(10, 34, 155);
+  --ash-yellow: rgb(251, 207, 7);
+  --ash-white: rgb(255, 255, 255);
+}
+
+/* Text styling */
+.display-1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--ash-yellow);
+}
+
+@media screen and (max-width: 992px) {
+  .display-1 {
+    font-size: 4rem;
+  }
+}
+
+.display-2 {
+  font-family: "Inter", serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--ash-white);
+}
+
+@media screen and (max-width: 992px) {
+  .display-2 {
+    font-size: 1.5rem;
+  }
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--ash-yellow);
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--ash-blue);
+}
+
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h2:not(.display-2) {
+  margin-bottom: 1.56rem;
+}
+
+h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--ash-blue);
+}
+
+@media screen and (max-width: 992px) {
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: var(--ash-black);
+}
+
+.p-large {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  color: var(--ash-black);
+}
+
+a {
+  color: var(--ash-black);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--ash-blue);
+  text-decoration: none;
+}
+
+.nav-item {
+  font-family: Oswald;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  color: var(--ash-black);
+}
+
+.nav-item.current {
+  color: var(--ash-blue);
+}
+
+/* Buttons */
+.primary-blue {
+  background-color: var(--ash-blue);
+  border: none;
+  padding: 10px 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ash-white);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary-yellow {
+  background-color: var(--ash-yellow);
+  border: none;
+  padding: 10px 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ash-black);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.outlined-blue {
+  background-color: none;
+  border: 2px solid var(--ash-blue);
+  padding: 10px 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ash-blue);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.outlined-yellow {
+  background-color: none;
+  border: 2px solid var(--ash-yellow);
+  padding: 10px 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ash-yellow);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.outlined-white {
+  background-color: transparent;
+  border: 2px solid var(--ash-white);
+  padding: 10px 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ash-white);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button a:hover {
+  color: inherit;
+}
+
+/* Header and nav*/
+header {
+  background-color: #f8f9fc;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+header img {
+  width: 6.25rem;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 1.87rem;
+}
+
+@media screen and (max-width: 767px) {
+  nav:not(.hmenu, .mobile-menu) {
+    display: none;
+  }
+
+  .menu-icon {
+    position: absolute;
+    right: 5vw;
+    z-index: 999;
+    width: 48px;
+    height: 48px;
+  }
+
+  .hmenu {
+    display: none;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    height: calc(100dvh - 100%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--ash-white);
+  }
+
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu li {
+    margin: 0;
+  }
+
+  .nav-item {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hmenu,
+  .mobile-menu,
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* Footer */
+footer {
+  padding: 1rem 0;
+  background-color: #f8f9fc;
+}
+
+footer div:nth-child(2) p {
+  margin: 0 1rem 0 0;
+}
+
+/* Sections spacing */
+section {
+  margin: 0 0 4rem 0;
+}
+
+/* Homepage elements */
+.welcome {
+  min-height: 75vh;
+  width: 100%;
+  background-image: url(../img/welcome-image.png);
+  background-size: cover;
+}
+
+.welcome-buttons {
+  margin: 1.88rem 0 2rem 0;
+}
+
+.welcome-buttons button {
+  margin: 0 0.88rem 0 0;
+}
+
+iframe {
+  margin: 0 0 1rem 0;
+}
+
+.content-card {
+  margin: 0 0 1rem 0;
+}
+
+.content-card:hover {
+  opacity: 0.8;
+}
+
+.content-card div:nth-child(1) {
+  border: 2px solid var(--ash-blue);
+}
+
+.content-card div:nth-child(2) {
+  padding: 0.31rem 0.63rem 0.63rem 0.63rem;
+}
+
+.content-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content-card a {
+  text-decoration: none;
+}
+
+.content-card h3 {
+  margin: 0 0 0.3rem 0;
+}
+
+/* Adhesion elements */
+.page-banner-adherer {
+  min-height: 37.5vh;
+  width: 100%;
+  background-image: url(../img/adherer-image.png);
+  background-size: cover;
+}
+
+.inline-card {
+  border: 2px solid var(--ash-yellow);
+  padding: 1.25rem 0.94rem;
+}
+
+.inline-card:not(:last-of-type) {
+  margin: 0 0 0.94rem 0;
+}
+
+.inline-card p {
+  padding: 0 1rem 0 0;
+}
+
+.online-block {
+  background-color: var(--ash-blue);
+  padding: 2.5rem;
+}
+
+@media screen and (max-width: 576px) {
+  .online-block {
+    margin: 1rem 0 0 0;
+  }
+}
+
+.online-block h3,
+.online-block p {
+  color: var(--ash-white);
+  margin: 0 0 1.56rem 0;
+}
+
+.online-block span {
+  color: var(--ash-yellow);
+  font-weight: 600;
+}
+
+.certificat-medical {
+  background-color: rgba(251, 207, 7, 0.3);
+  padding: 1.56rem 0 3.13rem 0;
+}
+
+.certificat-medical h3 {
+  margin: 0 0 0.94rem 0;
+}
+
+@media screen and (max-width: 576px) {
+  .certificat-medical p:nth-of-type(2) {
+    margin: 0 0 1rem 0;
+  }
+}
+
+.faq h3 {
+  margin: 0 0 0.45rem 0;
+}
+
+.question-block {
+  height: 100%;
+  margin: 0 0 1.55rem 0;
+}
+
+/* Practical info elements */
+.page-banner-infos {
+  min-height: 37.5vh;
+  width: 100%;
+  background-image: url(../img/infos-image.png);
+  background-size: cover;
+}
+
+.course-card {
+  padding: 1.25rem 0.94rem;
+  border: 2px solid var(--ash-yellow);
+  margin-top: -2px;
+}
+
+.course-card:nth-of-type(1) {
+  border: none;
+}
+
+@media screen and (max-width: 576px) {
+  .course-card:nth-of-type(1) p {
+    display: none;
+  }
+
+  .course-card:nth-of-type(2) {
+    margin: -2rem 0 0 0;
+  }
+}
+
+.course-card:nth-of-type(1) p {
+  font-weight: 600;
+}
+
+.course-card p {
+  width: 100%;
+}
+
+.course-card p:nth-of-type(4) {
+  width: 150%;
+}
+
+@media screen and (max-width: 600px) {
+  .course-card {
+    flex-wrap: wrap;
+  }
+}
+
+.map iframe {
+  width: 100%;
+  height: 43rem;
+}
+
+/* Le Petit Escrimeur elements */
+.page-banner-lpe {
+  min-height: 37.5vh;
+  width: 100%;
+  background-image: url(../img/lpe-image.png);
+  background-size: cover;
+}
+
+.journal-card {
+  margin: 0 0 1.55rem 0;
+  padding: 1.25rem 0.94rem;
+  border: 2px solid var(--ash-yellow);
+}
+
+.journal-card p {
+  margin: 0 0 1.55rem 0;
+}
+
+.journal-card h3 {
+  color: var(--ash-black);
+}
+
+/* About elements */
+.page-banner-about {
+  min-height: 37.5vh;
+  width: 100%;
+  background-image: url(../img/apropos-image.png);
+  background-size: cover;
+}
+
+.people-card {
+  margin: 0 0 1.55rem 0;
+}
+
+.people-card img {
+  width: 100%;
+  object-fit: cover;
+  margin: 0 0 0.62rem 0;
+  border: 2px solid var(--ash-blue);
+}
+
+.contact .inline-card {
+  margin: 1.55rem 0 0 0;
+}
