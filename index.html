@@ -29,6 +29,7 @@
 
     <!-- Global styling import -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/script.js"></script>
   </head>
 
   <body>
@@ -57,7 +58,7 @@
           </ul>
         </nav>
 
-        <img src="./img/menu-icon.svg" class="menu-icon" alt="Menu" />
+        <div class="menu-icon menu-icon-open" alt="Menu"></div>
 
         <nav class="hmenu">
           <ul>
@@ -234,17 +235,6 @@
           </div>
         </div>
       </div>
-      <script>
-        const menuHamburger = document.querySelector(".menu-icon");
-        const navLinks = document.querySelector(".hmenu");
-        const body = document.querySelector("body");
-
-        menuHamburger.addEventListener("click", () => {
-          navLinks.classList.toggle("mobile-menu");
-          body.classList.toggle("no-scroll");
-        });
-      </script>
-      <script src=""></script>
     </footer>
 
     <!-- Scripts -->

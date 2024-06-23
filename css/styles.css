@@ -218,8 +218,9 @@ button a:hover {
 header {
   background-color: #f8f9fc;
   position: sticky;
+  width: 100%;
   top: 0;
-  z-index: 99;
+  /* z-index: 99; */
 }
 
 header img {
@@ -240,9 +241,21 @@ nav ul li {
   .menu-icon {
     position: absolute;
     right: 5vw;
-    z-index: 999;
+    /* z-index: 999; */
     width: 48px;
     height: 48px;
+  }
+
+  .menu-icon-open {
+    background-image: url("../img/menu-icon.svg");
+  }
+
+  .menu-icon-close {
+    background-image: url("../img/close-menu-icon.svg");
+  }
+
+  .menu-icon:hover {
+    cursor: pointer;
   }
 
   .hmenu {
@@ -256,6 +269,7 @@ nav ul li {
   .mobile-menu {
     width: 100%;
     height: calc(100dvh - 100%);
+    /* height: 100vh; */
     position: absolute;
     top: 100%;
     left: 0;
@@ -264,7 +278,7 @@ nav ul li {
     justify-content: center;
     align-items: center;
     background-color: var(--ash-white);
-    z-index: 100;
+    /* z-index: 100; */
   }
 
   .mobile-menu ul {
